@@ -1,0 +1,23 @@
+<!--fundamentals1.html-->
+
+<body>
+    <svg id="chart" width="600" height="300"></svg>
+    <script>
+        var array = [];
+        function factors(number){
+            for (i = 1; i <= number; i += 1){
+                if(n % i === 0){
+                    array.push(i);
+                }
+            }
+        }
+        d3.select("#chart")
+            .selectAll("circle")
+            .data(array)
+            .enter()
+            .append("circle")
+                .attr("r", array[i])
+                .attr("cx", array[i])
+                .attr("stroke", "blue")
+    </script>
+</body>

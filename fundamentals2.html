@@ -1,0 +1,25 @@
+<!--fundamentals2.html-->
+
+<body>
+    <svg id="chart" width="1000" height="300"></svg>
+    <script>
+        const array = [92,56,14,73,22,38,93,45,55];
+        const newarray = [750,550,50,650,150,250,850.350,450];
+        
+        d3.select("#chart")
+            .selectAll("circle")
+            .data(array)
+            .enter()
+            .append("circle")
+                .attr("r", array[i])
+                .attr("cx", 100)
+                .attr("stroke", "blue")
+                setTimeout(function() {
+        d3.select("#chart").selectAll("circle")
+            .data(newarray)
+            .transition().duration(1500)
+                .attr("cx", d => d)
+        }, 2000)
+    </script>
+    
+</body>
