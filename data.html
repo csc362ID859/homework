@@ -1,0 +1,66 @@
+<!--Liam Carriker-->
+
+<body>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+  <!-- Set up basic webpage structure -->
+  <div id="header"></div>
+  <div id="nominal"></div>
+  <div id="ordinal"></div>
+  <div id="interval"></div>
+  <div id="ratio"></div>
+
+  <style>
+    .red {
+        color: white;
+        background-color: #e41a1c;
+    }
+    .green {
+        color: #4daf4a;
+    }
+    .blue {
+        color: white;
+        background-color: #377eb8;
+    }
+    .purple {
+        color: #984ea3;
+        border: solid green 2px;
+    }
+    .pageHead {
+        color: yellow;
+        background-color: black;
+    }
+    .cocoa {
+        color: 431004;
+        background: #bb462e;
+    }
+
+  </style>
+
+  <script>
+    const header = d3.select('#header');
+    const nominal = d3.select('#nominal');
+    const ordinal = d3.select('#ordinal');
+    const interval = d3.select('#interval');
+    const ratio = d3.select('#ratio');
+
+    header.classed('pageHead', true);
+    nominal.classed('purple', true);
+    ordinal.classed('blue', true);
+    interval.classed('cocoa', true);
+    ratio.classed('red', true);
+
+    header.append("h1").text("D3 and Data Types Part 2")
+    nominal.append("h2").text("Nominal Data")
+    nominal.append("p").text("Nominal data is a type of data which classifies named data with no standard order. An example of nominal data is Premier League soccer teams.")
+    ordinal.append("h2").text("Ordinal Data")
+    ordinal.append("p").text("Ordinal data is a type of data which classifies ordered data using a non-numeric ranking or scale. An example of ordinal data would be military ranks.")
+    interval.append("h2").text("Interval Data")
+    interval.append("p").text("Interval data is a type of numerical data with equal distances between values and no defined zero/start-point. An example of this data type would be date ranges.")
+    ratio.append("h2").text("Ratio Data")
+    ratio.append("p").text("Ratio data is a numerical data type like interval data except with a defined zero. This can usually be obtained through measurements, an example being the number of chairs in a classroom.")
+
+
+  </script>
+
+</body>
